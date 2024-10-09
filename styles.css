@@ -1,337 +1,84 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  h1, h2, h3 {
-    font-weight: bold;
-    margin-bottom: 0.5em;
-  }
-  
-  h1 {
-    font-size: 36px;
-  }
-  
-  h2 {
-    font-size: 24px;
-  }
-  
-  h3 {
-    font-size: 18px;
-  }
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
-/* Style the dropdown menu */
-.dropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 150px;
-  }
-  
-  .dropdown li {
-    margin-bottom: 10px;
-  }
-  
-  .dropdown li a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .dropdown li a:hover {
-    color: #666;
-  }
-  
-  /* Add a hover effect to the menu */
-  nav ul li:hover .dropdown {
-    display: block;
-  }
-  
-  /* Add a transition effect to the dropdown menu */
-  .dropdown {
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .dropdown:hover {
-    opacity: 1;
-  }
-
-/* Add CSS styles for images */
-.image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-  
-/* Add this CSS to make the header slide to the left when scrolling up */
-header.scrolled {
-    transform: translateX(-100%);
+h1, h2, h3 {
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
-/* Add this CSS to make the header slide back to the right when scrolling down */
-header.unscrolled {
-    transform: translateX(0);
+h1 {
+  font-size: 36px;
 }
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* Header Styles */
 
 header {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    transition: transform 0.3s ease-in-out;
+  background-color: #3498db;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+header nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 header nav ul li {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 header nav a {
-    color: #333;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .logo {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-.hero {
-    background-image: linear-gradient(to bottom, #fff, #f7f7f7);
-    padding: 100px;
-    text-align: center;
-    margin-top: 80px;
+/* Navigation Styles */
+
+.hamburger-container {
+  position: relative;
 }
 
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.features {
-    padding: 50px;
-    text-align: center;
-}
-
-.features h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.features p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.get-connected {
-    padding: 50px;
-    text-align: center;
-}
-
-.get-connected h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.get-connected p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.how-it-works {
-    padding: 50px;
-    text-align: center;
-}
-
-.how-it-works h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.how-it-works p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.statistics {
-    padding: 50px;
-    text-align: center;
-}
-
-.statistics h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.statistics p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.onboarding {
-    padding: 50px;
-    text-align: center;
-}
-
-.onboarding h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.onboarding p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.choose-plan {
-    padding: 50px;
-    text-align: center;
-}
-
-.choose-plan h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.choose-plan p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.trusted-by {
-    padding: 50px;
-    text-align: center;
-}
-
-.trusted-by h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.trusted-by p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.common-questions {
-    padding: 50px;
-    text-align: center;
-}
-
-.common-questions h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.common-questions p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-.back-to-top {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
-
-.back-to-top:hover {
-    background-color: #555;
-}
-/* Style the header */
-header {
-    position: relative;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: left;
-  }
-  
-  /* Style the navigation */
-  nav {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-  
-  /* Style the menu */
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Style the dropdown menu */
-  .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 150px;
-    right: 0;
-  }
-  
-  .dropdown li {
-    margin-bottom: 10px;
-  }
-  
-  .dropdown li a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .dropdown li a:hover {
-    color: #666;
-  }
-  
-  /* Style the hamburger icon */
 .hamburger {
   display: inline-block;
   cursor: pointer;
@@ -358,7 +105,6 @@ header {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Style the dropdown menu */
 .dropdown {
   display: none;
   position: absolute;
@@ -382,115 +128,197 @@ header {
   color: #666;
 }
 
-/* Add a hover effect to the menu */
-nav ul li:hover .dropdown {
+.hamburger-container:hover .dropdown {
   display: block;
 }
 
-/* Add a transition effect to the dropdown menu */
-.dropdown {
-  transition: opacity 0.5s ease-in-out;
+/* Hero Section Styles */
+
+.hero {
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  background-size: 100% 300px;
+  background-position: 0% 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-.dropdown:hover {
-  opacity: 1;
+.hero h1 {
+  font-size: 48px;
 }
 
-  /* Add a hover effect to the menu */
-  nav ul li:hover .dropdown {
-    display: block;
-  }
-  
-  /* Add a transition effect to the dropdown menu */
-  .dropdown {
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .dropdown:hover {
-    opacity: 1;
-  }
+.hero p {
+  font-size: 18px;
+}
 
-/* Add a hover effect to buttons */
-button:hover {
-    background-color: #333;
-    color: #fff;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  /* Add a scrolling animation to the back-to-top button */
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    animation: scroll 2s infinite;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-/* Create a grid container */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
-  }
-  
-  /* Define grid items */
-  .grid-item {
-    grid-column: span 4;
-  }
-  
-  /* Make the layout responsive */
-  @media (max-width: 768px) {
-    .grid-item {
-      grid-column: span 6;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .grid-item {
-      grid-column: span 12;
-    }
-  }
+.hero button {
+  background-color: #fff;
+  color: #3498db;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
 
-@media (max-width: 768px) {
-    /* For tablet devices */
-  }
-  
-  @media (max-width: 480px) {
-    /* For mobile devices */
-  }
+.hero button:hover {
+  background-color: #ccc;
+}
 
-@media only screen and (max-width: 768px) {
-    /* For mobile devices */
-    .hero {
-      height: 50vh;
-    }
-    .features ul li {
-      margin-bottom: 10px;
-    }
-    .testimonials ul li {
-      margin-bottom: 10px;
-    }
-  }
-  
-  @media only screen and (max-width: 480px) {
-    /* For smaller mobile devices */
-    .hero {
-      height: 30vh;
-    }
-    .features ul li {
-   margin-bottom: 5px;
-    }
-    .testimonials ul li {
-      margin-bottom: 5px;
-    }
-  }
+/* Features Section Styles */
+
+.features {
+  padding: 50px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 24px;
+}
+
+.features p {
+  font-size: 18px;
+}
+
+.features img {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+/* Testimonials Section Styles */
+
+.testimonials {
+  padding: 50px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.testimonials h2 {
+  font-size: 24px;
+}
+
+.testimonials .testimonial {
+  margin: 20px;
+}
+
+.testimonials .testimonial p {
+  font-size: 18px;
+}
+
+.testimonials .testimonial img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.testimonials .testimonial span {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Call to Action Section Styles */
+
+.call-to-action {
+  padding: 50px;
+  text-align: center;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.call-to-action h2 {
+  font-size: 24px;
+}
+
+.call-to-action p {
+  font-size: 18px;
+}
+
+.call-to-action button {
+  background-color: #fff;
+  color: #3498db;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.call-to-action button:hover {
+  background-color: #ccc;
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-section {
+  margin: 20px;
+}
+
+footer .footer-section h3 {
+  font-size: 18px;
+}
+
+footer .footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-section li {
+  margin-bottom: 10px;
+}
+
+footer .footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer-section a:hover {
+  color: #ccc;
+}
+
+footer .copyright {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Back to Top Button Styles */
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+  background-color: #2980b9;
+}
+
+.back-to-top:focus {
+  outline: none;
+}
