@@ -29,3 +29,11 @@ document.addEventListener('scroll', () => {
         header.classList.add('unscrolled');
     }
 });
+// Add a JavaScript function to toggle the dropdown menu
+function toggleDropdown() {
+  var dropdown = document.querySelector('.dropdown');
+  dropdown.classList.toggle('show');
+}
+
+// Add an event listener to the menu
+document.querySelector('nav ul li').addEventListener('mouseover', toggleDropdown);
