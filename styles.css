@@ -26,6 +26,44 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Style the dropdown menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 150px;
+  }
+  
+  .dropdown li {
+    margin-bottom: 10px;
+  }
+  
+  .dropdown li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .dropdown li a:hover {
+    color: #666;
+  }
+  
+  /* Add a hover effect to the menu */
+  nav ul li:hover .dropdown {
+    display: block;
+  }
+  
+  /* Add a transition effect to the dropdown menu */
+  .dropdown {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .dropdown:hover {
+    opacity: 1;
+  }
+  
 /* Add CSS styles for images */
 .image {
     width: 100%;
