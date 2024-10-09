@@ -14,3 +14,18 @@ window.addEventListener('scroll', () => {
     logo.style.display = 'block';
   }
 });
+// Add event listener to back to top button
+document.querySelector('.back-to-top').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Add event listener to logo to hide and show on scroll
+document.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 200) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+        header.classList.add('unscrolled');
+    }
+});
