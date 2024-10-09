@@ -331,6 +331,71 @@ header {
     color: #666;
   }
   
+  /* Style the hamburger icon */
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger:hover span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger:hover span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Style the dropdown menu */
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 150px;
+  right: 0;
+}
+
+.dropdown li {
+  margin-bottom: 10px;
+}
+
+.dropdown li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown li a:hover {
+  color: #666;
+}
+
+/* Add a hover effect to the menu */
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+/* Add a transition effect to the dropdown menu */
+.dropdown {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dropdown:hover {
+  opacity: 1;
+}
+
   /* Add a hover effect to the menu */
   nav ul li:hover .dropdown {
     display: block;
